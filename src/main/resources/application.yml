@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/webtoon
+    username: root
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+      hibernate.hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+
+application:
+  security:
+    jwt:
+      secret-key: q5OZcSm61DInZokm3de/qdanQpJuWThlUrMHCQoMFkg=
+      expiration: 8640000
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
+  file:
+    upload:
+      photos-output-path: ./uploads
+
